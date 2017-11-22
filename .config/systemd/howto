@@ -1,0 +1,5 @@
+1. Create executable script
+2. Create name-of.service in ~/.config/systemd/user
+3. Run 'systemctl daemon-reload'
+4. Run 'systemctl --user enable name-of.service'
+5. Run 'systemctl --user start name-of.service'

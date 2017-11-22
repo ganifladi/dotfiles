@@ -1,0 +1,12 @@
+[Unit]
+Description=Send alerts on battery events
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/rene/.local/bin/battery-alert
+Environment="DISPLAY=:0" "XAUTHORITY=/home/rene/.Xauthority"
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
