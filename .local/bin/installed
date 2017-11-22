@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat /var/log/pacman.log | grep -i "installed"

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# --DAY-MODE
+
+HOME=$HOME
+NITRO=$HOME'/.config/nitrogen/bg-saved.cfg'
+GTK2=$HOME'/.gtkrc-2.0'
+GTK3=$HOME'/.config/gtk-3.0/settings.ini'
+ROFI=$HOME'/.config/rofi/config'
+I3CONF=$HOME'/.config/i3/config'
+WALL='mountain-oleg-chursin-216430x.jpg'
+
+# WALLPAPER
+nitrogen --set-zoom-fill $HOME/.wallpapers/$WALL
+sed -i 's^file=.*^file=/home/rene/\.wallpapers/'$WALL'^' $NITRO
+
+# GTK2 THEME
+sed -i 's^gtk-theme-name=.*^gtk-theme-name="Breath"^' $GTK2
+
+# GTK3 THEME
+sed -i 's^gtk-theme-name=.*^gtk-theme-name=Breath^' $GTK3
+
+# ROFI
+sed -i 's^rofi.color-window.*^rofi.color-window: #eff1f5, #eff1f5, #eff1f5^' $ROFI
+sed -i 's^rofi.color-normal.*^rofi.color-normal: #eff1f5, #343d46, #eff1f5, #eff1f5, #bf616a, #3377cc^' $ROFI
+
+# i3 CONFIG
+sed -i 's^compton -b.*^compton -b --config ~/.config/compton.day.conf^' $I3CONF
+i3-msg restart

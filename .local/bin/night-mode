@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# --NIGHT-MODE
+
+HOME=$HOME
+NITRO=$HOME'/.config/nitrogen/bg-saved.cfg'
+GTK2=$HOME'/.gtkrc-2.0'
+GTK3=$HOME'/.config/gtk-3.0/settings.ini'
+ROFI=$HOME'/.config/rofi/config'
+I3CONF=$HOME'/.config/i3/config'
+WALL='nature-ashim-d-silva-162286.jpg'
+
+# WALLPAPER
+nitrogen --set-zoom-fill $HOME/.wallpapers/$WALL
+sed -i 's^file=.*^file=/home/rene/\.wallpapers/'$WALL'^' $NITRO
+
+# GTK2 THEME
+sed -i 's^gtk-theme-name=.*^gtk-theme-name="Breeze-Dark"^' $GTK2
+
+# GTK3 THEME
+sed -i 's^gtk-theme-name=.*^gtk-theme-name=Breeze-Dark^' $GTK3
+
+# ROFI
+sed -i 's^rofi.color-window.*^rofi.color-window: #242a34, #242a34, #242a34^' $ROFI
+sed -i 's^rofi.color-normal.*^rofi.color-normal: #242a34, #b7bdca, #242a34, #242a34, #bf616a, #3377cc^' $ROFI
+
+# i3 CONFIG
+sed -i 's^compton -b.*^compton -b --config ~/.config/compton.night.conf^' $I3CONF
+i3-msg restart
