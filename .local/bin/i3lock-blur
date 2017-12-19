@@ -2,8 +2,19 @@
 TMPBG=/tmp/screen.png
 LOCK=$HOME/.face
 RES=$(xrandr | grep 'current' | sed -E 's/.*current\s([0-9]+)\sx\s([0-9]+).*/\1x\2/')
- 
-ffmpeg -f x11grab -video_size $RES -y -i $DISPLAY -i $LOCK -filter_complex "boxblur=7:2,overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2" -vframes 1 $TMPBG -loglevel quiet
-i3lock -i $TMPBG
+
+ffmpeg -f x11grab -video_size $RES -y -i $DISPLAY -i $LOCK -filter_complex "boxblur=12:4,overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2" -vframes 1 $TMPBG -loglevel quiet
+i3lock \
+    -i $TMPBG \
+    --timepos="x+762:y+210" --timefont="monaco" --timesize="64" --timestr="%H:%M" \
+    --datepos="tx+24:ty+25" \
+    --clock --datestr "" \
+    --insidecolor="00000000" --ringcolor="ffffffff" --line-uses-inside \
+    --keyhlcolor="d23c3dff" --bshlcolor="d23c3dff" --separatorcolor="00000000" \
+    --insidevercolor="fecf4dff" --insidewrongcolor="d23c3dff" \
+    --ringvercolor="ffffffff" --ringwrongcolor="ffffffff" --indpos="x+(w/2):y+(h/2)-1" \
+    --radius="126" --ring-width="3" --veriftext="" --wrongtext="" \
+    --textcolor="ffffffff" --timecolor="ffffffff" --datecolor="ffffffff"
+
 rm $TMPBG
 
