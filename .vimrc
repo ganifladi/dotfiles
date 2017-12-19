@@ -14,6 +14,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 " -- START: MY PLUGINS
 
+" airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " fold my classes and methods
 Plugin 'tmhedberg/SimpylFold'
 
@@ -56,6 +60,11 @@ filetype plugin indent on    " required
 
 " Base16 like theme
 colorscheme peachpuff
+
+" AirlineTheme
+let g:airline_theme='minimalist'
+" Powerline
+let g:airline_powerline_fonts = 1
 
 
 " use UTF-8
