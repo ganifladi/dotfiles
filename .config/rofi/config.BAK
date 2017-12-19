@@ -1,6 +1,0 @@
-rofi.terminal:      urxvt
-rofi.sidebar-mode:  true
-rofi.theme:         sidestyle.rasi
-rofi.modi:          window,drun,run,ssh
-rofi.show-icons:    true
-rofi.drun-icon-theme:   Papirus-Dark

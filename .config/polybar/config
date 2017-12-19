@@ -49,10 +49,10 @@ underline-color = ${colors.foreground}
 ;border-bottom-size = 0
 ;border-color = #00000000
 
-padding-left = 2
-padding-right = 6
-module-margin-left = 1
-module-margin-right = 3
+padding-left = 3
+padding-right = 7
+module-margin-left = 2
+module-margin-right = 4
 
 font-0 = San Fransisco:pixelsize=12;3
 ;font-1 = FontAwesome:pixelsize=13;4
@@ -63,7 +63,7 @@ fixed-center = true
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = mpv cmus volume wlan battery date time
+modules-right = mpv cmus bluetooth volume wlan battery date time weather rofix
 
 tray-position = false
 ;tray-detached = false
@@ -226,7 +226,7 @@ adapter = AC
 full-at = 97
 poll-interval = 5.0
 
-format-charging = <animation-charging> <label-charging>
+format-charging = <label-charging>
 format-charging-padding = 0
 
 format-discharging = <ramp-capacity> <label-discharging>
@@ -236,7 +236,7 @@ format-full = <label-full>
 format-full-padding = 0
 format-full-foreground = ${colors.battery-full}
 
-label-charging = %percentage%
+label-charging =  %percentage%
 label-discharging = %percentage%
 label-full = 
 label-charging-foreground = ${colors.foreground-alt}
@@ -318,6 +318,29 @@ type = custom/script
 interval = 5
 
 exec = ~/.config/polybar/bluetooth.sh
+
+format-foreground = ${colors.foreground-alt}
+label = %output%
+
+[module/weather]
+type                     = custom/script
+interval                 = 10
+format                   = <label>
+format-padding           = 2
+format-prefix            = " "
+format-suffix            = "°C"
+format-prefix-foreground = ${colors.red}
+format-background        = ${colors.modb}
+exec = /usr/bin/python2.7 ~/.config/polybar/weather.py
+
+[module/rofix]
+type = custom/script
+
+exec = ~/.config/polybar/rofi.sh
+click-left = ~/.config/polybar/rofi.sh 1
+
+format = <label>
+format-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
 type = custom/menu
