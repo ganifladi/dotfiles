@@ -7,10 +7,11 @@ xset s off -dpms &
 xset b 0 0 0 &
 ~/.fehbg &
 fcitx &
-redshift &
-dunst -config ~/.config/dunst/dunstrc
-compton -b --config ~/.config/compton.conf &
-~/.config/polybar/launch.sh
+nm-applet &
+#redshift &
+dunst -config ~/.config/dunst/dunstrc &
+sleep 1 && compton -b --config ~/.config/compton.conf &
+sleep 1 && ~/.config/polybar/launch.sh &
 
 # If you want to use GNOME config tools...
 #

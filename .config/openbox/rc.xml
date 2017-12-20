@@ -25,38 +25,38 @@
     <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>artwiz lemon</name>
-      <size>8</size>
+      <name>San Francisco</name>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>artwiz lemon</name>
-      <size>8</size>
+      <name>San Francisco</name>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>artwiz lemon</name>
-      <size>9</size>
+      <name>San Francisco</name>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>artwiz lemon</name>
-      <size>9</size>
+      <name>San Francisco</name>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
       <name>Sans</name>
-      <size>8</size>
+      <size>10</size>
       <weight></weight>
       <slant></slant>
     </font>
     <font place="MenuItem">
       <name>Sans</name>
-      <size>8</size>
+      <size>10</size>
       <weight></weight>
       <slant></slant>
     </font>
@@ -196,7 +196,7 @@
     <!-- Keybindings for running applications -->
     <keybind key="A-Return">
       <action name="Execute">
-        <command>urxvtc</command>
+        <command>urxvt -e fish</command>
       </action>
     </keybind>
     <keybind key="A-space">
@@ -204,6 +204,30 @@
         <name>rofi</name>
         <command>rofi -show drun -theme-str '#prompt { text-color: rgba(0,0,0,0%); }'</command>
       </action>
+    </keybind>
+    <keybind key="A-S-r">
+        <action name="Execute">
+            <name>Restart Openbox</name>
+            <command>openbox --restart</command>
+        </action>
+    </keybind>
+    <keybind key="A-S-e">
+        <action name="Execute">
+            <name>Stop Openbox Session</name>
+            <command>openbox --exit</command>
+        </action>
+    </keybind>
+    <keybind key="A-S-x">
+        <action name="Execute">
+            <name>Lock Screen</name>
+            <command>~/.local/bin/i3lock-blur</command>
+        </action>
+    </keybind>
+    <keybind key="A-S-l">
+        <action name="Execute">
+            <name>Random Wallpaper</name>
+            <command>feh --randomize --bg-fill ~/.wallpapers/</command>
+        </action>
     </keybind>
     <keybind key="A-c">
       <action name="MoveToCenter"/>
@@ -241,7 +265,7 @@
     <keybind key="A-P">
       <action name="Execute">
         <name>Take Screenshot</name>
-        <command>scrot /tmp/`date +%Y%m%d_%H%M%S`.png</command>
+        <command>scrot /tmp/`date +%Y%m%d_%H%M%S`.png &amp;&amp; notify-send 'SCROT' 'Screenshot saved at /tmp'</command>
       </action>
     </keybind>
     <!--
