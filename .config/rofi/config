@@ -118,8 +118,7 @@ rofi.show-match: false
 ! ----------------------------------------------------------------------------
 
 ! Maximum number of lines to show before scrolling.
-!rofi.lines: 6
-rofi.lines: 25
+rofi.lines: 5
 
 ! Keep a fixed number of visible lines (See the lines option.)
 rofi.fixed-num-lines: true
@@ -143,7 +142,7 @@ rofi.padding: 5
 !  1 2 3
 !  8 0 4
 !  7 6 5
-rofi.location: 3
+rofi.location: 2
 
 ! Y-offset relative to location.
 rofi.yoffset: 34
