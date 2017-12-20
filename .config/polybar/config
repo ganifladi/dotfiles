@@ -11,12 +11,13 @@
 ;=====================================================
 
 [colors]
-background = ${xrdb:color0:#FF242a34}
-;background = 00ffffff
-background-alt = ${xrdb:color0:#FF242a34}
-;background-alt = 00ffffff
-foreground = ${xrdb:color7:#FFa7adba}
-foreground-alt = #FF777d8a
+dark = ${xrdb:color0:#FF242a34}
+light = ${xrdb:color7:#FFa7adba}
+soft = #FF777d8a
+background = ${colors.dark}
+background-alt = ${colors.background}
+foreground = ${colors.light}
+foreground-alt = ${colors.soft}
 primary = ${xrdb:color4:#FFbf616a}
 secondary = #00aaff
 alert = ${xrdb:color1}
