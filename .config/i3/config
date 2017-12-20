@@ -262,7 +262,7 @@ client.background       $background
 
 # start i3bar to display a workspace bar
 bar {
-  i3bar_command i3bar
+  #i3bar_command i3bar
   mode invisible
   position bottom
   height $bar-height
@@ -308,7 +308,7 @@ bindsym --release Mod4+Right exec --no-startup-id audioinfo vlc --action next &&
 bindsym --release Mod4+Up exec --no-startup-id cmus-remote -s
 
 # monitor
-bindsym --release $mod+p exec --no-startup-id /home/rene/.local/bin/hdmi-check
+bindsym --release $mod+d exec --no-startup-id /home/rene/.local/bin/hdmi-check
 bindsym --release XF86Display exec --no-startup-id /home/rene/.local/bin/hdmi-check
 
 # lock screen
@@ -316,6 +316,7 @@ bindsym $mod+Shift+x exec ~/.local/bin/i3lock-blur
 
 # screenshot
 bindsym --release Print exec --no-startup-id scrot /tmp/`date +%Y%m%d_%H%M%S`.png && exec notify-send 'SCROT' 'Screenshot taken (/tmp)'
+bindsym --release $mod+p exec --no-startup-id scrot /tmp/`date +%Y%m%d_%H%M%S`.png && exec notify-send 'SCROT' 'Screenshot taken (/tmp)'
 
 
 ## Plasma Integration
