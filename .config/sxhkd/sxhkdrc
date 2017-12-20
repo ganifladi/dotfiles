@@ -3,8 +3,8 @@
 #
 
 # terminal emulator
-#super + Enter
-#    konsole
+super + enter
+urxvt
 
 # program launcher
 alt + space
