@@ -8,7 +8,8 @@ xset b 0 0 0 &
 ~/.fehbg &
 fcitx &
 nm-applet &
-#redshift &
+redshift &
+~/.local/bin/blurme
 dunst -config ~/.config/dunst/dunstrc &
 sleep 1 && compton -b --config ~/.config/compton.conf &
 sleep 1 && polybar minimal &
