@@ -12,11 +12,11 @@
 
 [colors]
 dark-background = ${xrdb:color0:#FF242a34}
-dark-background-alt = ${xrdb:color0:#FF242a34}
+dark-background-alt = #FF202630
 dark-foreground = ${xrdb:color7:#FFa7adba}
 dark-foreground-alt = #FF777d8a
 light-background = #FFf5f5f5
-light-background-alt = #FFf5f5f5
+light-background-alt = #FFe5e9ec
 light-foreground = #363a46
 light-foreground-alt = #FF444751
 
@@ -24,7 +24,7 @@ background = ${colors.dark-background}
 background-alt = ${colors.dark-background-alt}
 foreground = ${colors.dark-foreground}
 foreground-alt = ${colors.dark-foreground-alt}
-primary = ${xrdb:color4:#FFbf616a}
+primary = ${xrdb:color15}
 secondary = #00aaff
 alert = ${xrdb:color1}
 battery-charging = #00aaff
@@ -38,8 +38,8 @@ width = 12%
 height = 42
 offset-x = 86%
 offset-y = 32
-background = ${colors.dark-background}
-foreground = ${colors.dark-foreground}
+background = ${colors.light-background}
+foreground = ${colors.light-foreground}
 padding-left = 3
 padding-right = 7
 module-margin-left = 2
