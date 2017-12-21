@@ -11,19 +11,46 @@
 ;=====================================================
 
 [colors]
-dark = ${xrdb:color0:#FF242a34}
-light = ${xrdb:color7:#FFa7adba}
-soft = #FF777d8a
-background = ${colors.dark}
-background-alt = ${colors.background}
-foreground = ${colors.light}
-foreground-alt = ${colors.soft}
+dark-background = ${xrdb:color0:#FF242a34}
+dark-background-alt = ${xrdb:color0:#FF242a34}
+dark-foreground = ${xrdb:color7:#FFa7adba}
+dark-foreground-alt = #FF777d8a
+light-background = #FFf5f5f5
+light-background-alt = #FFf5f5f5
+light-foreground = #363a46
+light-foreground-alt = #FF444751
+
+background = ${colors.dark-background}
+background-alt = ${colors.dark-background-alt}
+foreground = ${colors.dark-foreground}
+foreground-alt = ${colors.dark-foreground-alt}
 primary = ${xrdb:color4:#FFbf616a}
 secondary = #00aaff
 alert = ${xrdb:color1}
 battery-charging = #00aaff
 battery-discharging = #ffaa00
 battery-full = #00ffaa
+
+[bar/minimal]
+monitor = ${env:MONITOR:eDP1}
+bottom = false
+width = 12%
+height = 42
+offset-x = 86%
+offset-y = 32
+background = ${colors.dark-background}
+foreground = ${colors.dark-foreground}
+padding-left = 3
+padding-right = 7
+module-margin-left = 2
+module-margin-right = 4
+font-0 = San Fransisco:pixelsize=12;3
+font-1 = Material Design Icons:pixelsize=13;3
+font-2 = WeatherIcons:pixelsize=13;3
+fixed-center = true
+modules-left = 
+modules-center = 
+modules-right = volume wlan time
 
 [bar/top]
 monitor = ${env:MONITOR:eDP1}
