@@ -8,16 +8,25 @@ else
 fi
 
 PAGES=$(pdftk $FILE dump_data | grep NumberOfPages | sed 's/[^0-9]*//')
+echo '> Total pages in document: '$PAGES
 
 # One paper contains four pdf pages - two on the front, and two on the back side
 # DEFAULT = 4
 PAGES_ON_PAPER=4
 
 if [ -z "$2" ]; then
-    # One block has five piece of paper (to work without blocks, set this value to $PAGES)
-    # DEFAULT = 5
-    PAPER_IN_BLOCK=5
-    echo '> No value for paper blocks given - set to default(5)'
+    # Usually one block should have five pieces of paper ||||| ||||| |||||
+    # Each pieces within the block can be folded and stacked on each other
+    # These blocks can be glued together, which avoids bad folding ,:|:,
+    # PAPER_IN_BLOCK=5
+    # echo '> No value for paper blocks given - set to default(5)'
+
+    # However, to work without blocks, set this value to $PAGES | | | | | | |
+    # then you will be able to stack every single paper on each other,
+    # fold it, and you're done. Should be fine up to six pieces of paper.
+    PAPER_IN_BLOCK=$PAGES
+    echo '> No value for paper blocks given - working without blocks'
+
 else
     # One block has five piece of paper (to work without blocks, set this value to $PAGES)
     PAPER_IN_BLOCK=$2
@@ -84,8 +93,12 @@ else
     NUP_ARR=("${NUP_ARR[@]}" $(2nup $REMAINING_PAGES $FULL_BLOCKS))
 
     # print my nup array!
-    echo '> Created 2nup array with blocks of '$PAPER_IN_BLOCK
-    #echo ${NUP_ARR[@]}
+    if [[ $PAPER_IN_BLOCK -eq $PAGES ]]; then
+        echo '> Created 2nup array without blocks'
+    else
+        echo '> Created 2nup array with blocks of '$PAPER_IN_BLOCK
+    fi
+    echo ${NUP_ARR[@]}
 
 
     # -----------------------------------------

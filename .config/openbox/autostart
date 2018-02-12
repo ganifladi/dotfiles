@@ -11,8 +11,8 @@ nm-applet &
 redshift &
 ~/.local/bin/blurme
 dunst -config ~/.config/dunst/dunstrc &
-sleep 1 && compton -b --config ~/.config/compton.conf &
-sleep 1 && polybar minimal &
+sleep 3 && compton -b --config ~/.config/compton.conf &
+sleep 3 && polybar minimal &
 
 # If you want to use GNOME config tools...
 #

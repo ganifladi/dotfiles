@@ -1,6 +1,6 @@
-window.*.title.bg.color: #a7adba
-window.*.label.text.color: #0E1310
-window.*.button.*.image.color: #0E1310
+window.*.title.bg.color: #282c34
+window.*.label.text.color: #abb2bf
+window.*.button.*.image.color: #abb2bf
 
 
 # Borders
@@ -13,7 +13,7 @@ border.width: 0
 # Title
 
 padding.width: 20
-padding.height: 20
+padding.height: 14
 window.*.title.bg: Solid Flat
 window.*.*.bg: Parentrelative
 window.label.text.justify: center

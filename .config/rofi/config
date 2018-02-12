@@ -145,7 +145,7 @@ rofi.padding: 5
 rofi.location: 2
 
 ! Y-offset relative to location.
-rofi.yoffset: 34
+rofi.yoffset: 42
 
 ! X-offset relative to location.
 rofi.xoffset: 0
