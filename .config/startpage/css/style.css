@@ -1,0 +1,18 @@
+/* This file should be in a folder called `css` */
+
+body {
+    font-family: sans;
+    margin-top: 220px;
+    text-align: center;
+    color: #c8ccd4;
+    transition: all 0.95s ease-out;
+}
+
+#clock {
+    font-weight: 700;
+    font-size: 100px;
+}
+
+#hex-color {
+    opacity: 0.3;
+}
