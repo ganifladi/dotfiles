@@ -1,0 +1,26 @@
+! https://github.com/neeasade/xst/blob/master/doc/Xresources
+
+st.termname:            st-256color
+st.shell:               /usr/bin/fish
+st.font:                Hack:pixelsize=16:antialias=true:autohint=true;
+st.borderpx:            40
+st.cursorshape:         2
+st.cursorthickness:     2
+st.cursorblinkstyle:    0
+st.cursorblinkontype:   1
+st.bold_font:           0
+st.xfps:                120
+st.actionfps:           30
+
+! Kerning / character bounding-box height multiplier
+st.chscale:           1.0
+! Kerning / character bounding-box width multiplier
+st.cwscale:           1.0
+! blinking timeout for terminal and cursor blinking (0 disables)
+st.blinktimeout:      800
+! bell volume. Value between -100 and 100. (0 disables)
+st.bellvolume:        0
+! this is a char that is exposed like so: `printf '\033[z'`
+st.prompt_char:       $
+
+st.opacity:     255
