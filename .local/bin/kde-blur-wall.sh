@@ -3,6 +3,7 @@
 ## Get Wallpaper Path
 #DIR=$(cat ~/.config/plasma-org.kde.plasma.desktop-appletsrc | grep "Image" | cut -c14- | tail -n -1)
 DIR=$(grep 'Image' ~/.config/plasma-org.kde.plasma.desktop-appletsrc | cut -c 14- | head -n 2 | tail -n 1)
+#DIR=$(grep 'Image' ~/.config/plasma-org.kde.plasma.desktop-appletsrc | cut -c 7-)
 #echo $DIR
 
 # Count slashes in path
@@ -16,16 +17,18 @@ FILE=$(echo "$DIR" | rev | cut -d '/' -f 1 | rev)
 # extract filename without extension
 IMAGE=$(echo "$FILE" | rev | cut -d '.' -f 2 | rev)
 
-echo "DIR:    $DIR"
-echo "PATHTO: $PATHTO"
-echo "FILE:   $FILE"
-echo "IMAGE:  $IMAGE"
+#echo "DIR:    $DIR"
+#echo "PATHTO: $PATHTO"
+#echo "FILE:   $FILE"
+#echo "IMAGE:  $IMAGE"
 
 ## check reference file
 if [ -f "$PATHTO/.my-sddm-bg-reference/$IMAGE" ]
 then
     ## file exists - break!
     echo 'The Login wallpaper <'"$IMAGE"'> already exists!'
+    echo 'If this is not your wallpaper, check whether the login picture matches with "Image" in "~/.config/plasma-org.kde.plasma.desktop-appletsrc"!'
+    echo 'Hint: "grep Image ~/.config/plasma-org.kde.plasma.desktop-appletsrc | cut -c 7-"'
     exit 0
 fi
 
@@ -36,11 +39,12 @@ if [ ! -d "$PATHTO/.my-sddm-bg-reference" ]; then
 fi
 
 ## clean up reference folder
-rm -rfv "$PATHTO"/.my-sddm-bg-reference/*
+rm -rf "$PATHTO"/.my-sddm-bg-reference/*
+echo "Old reference files have been removed"
 
 ## save reference copy in reference dir
 touch "$PATHTO"/.my-sddm-bg-reference/"$IMAGE"
-echo "reference file created"
+echo "New reference file <$IMAGE> created"
 
 ## save a work copy in tmp
 cp "$DIR" /tmp
