@@ -36,7 +36,8 @@ floating_modifier $mod
 focus_follows_mouse yes
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal -e fish
+#bindsym $mod+Return exec i3-sensible-terminal -e fish
+bindsym $mod+Return exec /usr/bin/st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -109,9 +110,9 @@ set $WS3 "3:    "
 set $WS4 "4:    "
 set $WS5 "5:    "
 set $WS6 "6:    "
-set $WS7 "7:    "
-set $WS8 "8:    "
-set $WS9 "9:    "
+#set $WS7 "7:    "
+#set $WS8 "8:    "
+#set $WS9 "9:    "
 
 # switch to workspace
 bindsym $mod+1 workspace $WS1
@@ -120,10 +121,10 @@ bindsym $mod+3 workspace $WS3
 bindsym $mod+4 workspace $WS4
 bindsym $mod+5 workspace $WS5
 bindsym $mod+6 workspace $WS6
-bindsym $mod+7 workspace $WS7
-bindsym $mod+8 workspace $WS8
-bindsym $mod+9 workspace $WS9
-bindsym $mod+0 workspace $WS10
+#bindsym $mod+7 workspace $WS7
+#bindsym $mod+8 workspace $WS8
+#bindsym $mod+9 workspace $WS9
+#bindsym $mod+0 workspace $WS10
 
 # move focused container to workspace and follow
 bindsym $mod+Shift+1 move container to workspace $WS1; workspace $WS1
@@ -132,16 +133,16 @@ bindsym $mod+Shift+3 move container to workspace $WS3; workspace $WS3
 bindsym $mod+Shift+4 move container to workspace $WS4; workspace $WS4
 bindsym $mod+Shift+5 move container to workspace $WS5; workspace $WS5
 bindsym $mod+Shift+6 move container to workspace $WS6; workspace $WS6
-bindsym $mod+Shift+7 move container to workspace $WS7; workspace $WS7
-bindsym $mod+Shift+8 move container to workspace $WS8; workspace $WS8
-bindsym $mod+Shift+9 move container to workspace $WS9; workspace $WS9
+#bindsym $mod+Shift+7 move container to workspace $WS7; workspace $WS7
+#bindsym $mod+Shift+8 move container to workspace $WS8; workspace $WS8
+#bindsym $mod+Shift+9 move container to workspace $WS9; workspace $WS9
 
 # startup applications
 exec --no-startup-id xset s off -dpms &
 exec --no-startup-id xset b 0 0 0 &
 #exec --no-startup-id nitrogen --restore &
 exec --no-startup-id ~/.fehbg &
-exec --no-startup-id ~/.local/bin/blurme &
+#exec --no-startup-id ~/.local/bin/blurme &
 exec --no-startup-id fcitx &
 exec --no-startup-id nm-applet &
 exec --no-startup-id redshift &
@@ -205,6 +206,7 @@ for_window [class="^nexus*"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [title="Preferences$"] floating enable
+for_window [title="RIGA$"] floating enable
 
 # toggle tile/float
 set $mode_tile Toggle tile/float: Tile (1) Float (2)
@@ -300,6 +302,12 @@ bindsym Shift+XF86MonBrightnessDown exec xbacklight -dec 15
 
 # redshift
 bindsym --release $mod+ctrl+r exec ~/.local/bin/red.sh
+
+# toggle bluetooth
+bindsym --release $mod+ctrl+b exec ~/.local/bin/blue.sh
+
+# toggle wifi
+bindsym --release $mod+ctrl+w exec ~/.local/bin/wifi.sh
 
 # vlc
 bindsym --release Mod4+Down exec --no-startup-id audioinfo vlc --action playpause && cmus-remote -u

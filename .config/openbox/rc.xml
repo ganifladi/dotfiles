@@ -196,7 +196,7 @@
     <!-- Keybindings for running applications -->
     <keybind key="A-Return">
       <action name="Execute">
-        <command>urxvt -e fish</command>
+        <command>st -e fish</command>
       </action>
     </keybind>
     <keybind key="A-space">

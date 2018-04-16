@@ -16,3 +16,6 @@
 
 ! URxvt
 #include ".Xresources.d/urxvt"
+
+! st
+#include ".Xresources.d/st"

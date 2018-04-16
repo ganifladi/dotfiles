@@ -9,10 +9,10 @@ xset b 0 0 0 &
 fcitx &
 nm-applet &
 redshift &
-~/.local/bin/blurme
+#~/.local/bin/blurme
 dunst -config ~/.config/dunst/dunstrc &
-sleep 3 && compton -b --config ~/.config/compton.conf &
-sleep 3 && polybar minimal &
+sleep 1 && compton -b --config ~/.config/compton.blur.conf &
+sleep 1 && polybar top &
 
 # If you want to use GNOME config tools...
 #
