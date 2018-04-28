@@ -19,11 +19,15 @@ light-background = #FFf5f5f5
 light-background-alt = #FFe5e9ec
 light-foreground = #363a46
 light-foreground-alt = #66363a46
+trans-background = #00aabbcc
+trans-background-alt = #233a36
+trans-foreground = #ffffff
+trans-foreground-alt = #ffffff
 
-background = ${colors.dark-background}
-background-alt = ${colors.dark-background-alt}
-foreground = ${colors.dark-foreground}
-foreground-alt = ${colors.dark-foreground-alt}
+background = ${colors.trans-background}
+background-alt = ${colors.trans-background-alt}
+foreground = ${colors.trans-foreground}
+foreground-alt = ${colors.trans-foreground-alt}
 primary = ${xrdb:color15}
 secondary = #00aaff
 alert = ${xrdb:color1}
@@ -90,17 +94,17 @@ padding-right = 7
 module-margin-left = 2
 module-margin-right = 4
 
-font-0 = San Fransisco Display:style=Regular:pixelsize=12;3
+font-0 = San Fransisco Display:style=Bold:pixelsize=12;3
 ;font-1 = FontAwesome:pixelsize=13;4
 font-1 = Material Design Icons:pixelsize=13;3
-font-2 = Weather Icons:pixelsize=13;3
+font-2 = Weather Icons:pixelsize=13;5
 font-3 = material\-wifi:pixelsize=13;3
 
 fixed-center = true
 
 modules-left = bspwm i3 ewmh
 modules-center = 
-modules-right = mpv cmus bluetooth volume wifi battery time wttr
+modules-right = mpv cmus bluetooth volume wifi battery date time wttr
 
 tray-position = false
 ;tray-detached = false
@@ -125,7 +129,7 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
-label-focused-underline= ${colors.background}
+label-focused-underline= ${colors.foreground}
 label-focused-padding = 4
 
 label-occupied = %index%

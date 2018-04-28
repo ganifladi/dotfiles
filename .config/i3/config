@@ -15,7 +15,7 @@ set $bar-height  40
 set $border-width 0
 
 #for_window [class="^.*"] floating enable
-smart_gaps on
+#smart_gaps on
 
 # font for window titles and bar
 font pango:DejaVu Sans Mono 8
@@ -221,8 +221,8 @@ mode "$mode_tile" {
 
 # GAPS
 #smart_gaps on
-gaps inner 30
-gaps outer 20
+gaps inner 60
+gaps outer 30
 
 # Toggle Gaps
 set $mode_gaps Toggle gaps: (1)OFF (2)NORMAL (3)HUGE  

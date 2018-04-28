@@ -17,6 +17,9 @@ if [ $? -eq 0 ]; then
             sunny)
                 ICON=''
                 ;;
+            clear)
+                ICON=''
+                ;;
             partlycloudy)
                 ICON=''
                 ;;
