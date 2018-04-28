@@ -1,4 +1,6 @@
 #tty-clock -c -C 1
+# ENABLE DEL IN ST
+tput smkx
 
 # COLOURED MANPAGES
 set -x LESS_TERMCAP_mb (printf "\033[01;31m")  
