@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# simple search tool
+find . -name '*'$1'*'
