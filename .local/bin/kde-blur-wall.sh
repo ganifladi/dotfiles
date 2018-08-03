@@ -2,7 +2,8 @@
 
 ## Get Wallpaper Path
 #DIR=$(cat ~/.config/plasma-org.kde.plasma.desktop-appletsrc | grep "Image" | cut -c14- | tail -n -1)
-DIR=$(grep 'Image' ~/.config/plasma-org.kde.plasma.desktop-appletsrc | cut -c 14- | head -n 2 | tail -n 1)
+#DIR=$(grep 'Image' ~/.config/plasma-org.kde.plasma.desktop-appletsrc | cut -c 14- | head -n 2 | tail -n 1)
+DIR=$(grep 'Image' ~/.config/plasma-org.kde.plasma.desktop-appletsrc | cut -c 14- | head -n 1)
 #DIR=$(grep 'Image' ~/.config/plasma-org.kde.plasma.desktop-appletsrc | cut -c 7-)
 #echo $DIR
 

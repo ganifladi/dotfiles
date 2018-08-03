@@ -6,6 +6,11 @@ lfolder=Camera
 
 adb shell ls "$rfolder" > android.files
 
+# Create Camera folder if it does not exist
+if [ ! -d "$lfolder" ]; then
+  mkdir $lfolder
+fi
+
 ls "$lfolder" -1 > local.files
 
 rm -f update.files
