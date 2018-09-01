@@ -1,6 +1,6 @@
 ! https://github.com/neeasade/xst/blob/master/doc/Xresources
 
-st.termname:            st-256color
+st.termname:            xst-256color
 st.shell:               /usr/bin/fish
 st.font:                Hack:pixelsize=16:antialias=true:autohint=true;
 st.borderpx:            40

@@ -19,3 +19,6 @@ set -x LESS_TERMCAP_us (printf "\033[01;32m")
 #if not __ssh_agent_is_started
 #    __ssh_agent_start
 #end
+
+# see also .bashrc!
+alias print "lp"

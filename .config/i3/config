@@ -150,6 +150,8 @@ exec --no-startup-id ~/.local/bin/hdmi-check
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id compton -b --config ~/.config/compton.conf
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+# LIVE wallpaper
+#exec_always --no-startup-id "xwinwrap -ov -ni -fs -- mpv -wid WID --keepaspect=no --loop ~/.config/wall/wl7.gif"
 
 # assign classes
 assign [class="Thunar"] $WS2

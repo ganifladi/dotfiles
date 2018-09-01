@@ -40,4 +40,6 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export DefaultIMModule=fcitx
 
+# see also fish config!
 alias config='/usr/bin/git --git-dir=/home/rene/.cfg --work-tree=/home/rene'
+alias print='lp'
