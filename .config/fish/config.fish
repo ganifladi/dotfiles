@@ -22,3 +22,4 @@ set -x LESS_TERMCAP_us (printf "\033[01;32m")
 
 # see also .bashrc!
 alias print "lp"
+alias config "/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
