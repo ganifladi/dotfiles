@@ -1,0 +1,8 @@
+
+#!/bin/bash
+
+# hide polybar
+# start from x0 y0
+# draw zone from start to x1920 y40
+hideIt.sh --name '^polybar-top_HDMI1$' --region 0x0+1920+40 --direction to
+p
