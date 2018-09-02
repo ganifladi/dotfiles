@@ -12,6 +12,7 @@ fcitx &
 nm-applet &
 redshift &
 #~/.local/bin/blurme
+~/.local/bin/hide &
 dunst -config ~/.config/dunst/dunstrc &
 sleep 1 && compton -b --config ~/.config/compton.blur.conf &
 sleep 1 && polybar top &

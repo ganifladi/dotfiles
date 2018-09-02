@@ -71,7 +71,7 @@ width = 100%
 height = 42
 offset-x = 0
 offset-y = 0
-;override-redirect = true
+override-redirect = true
 ;radius = 6.0
 
 background = ${colors.background}
