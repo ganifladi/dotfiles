@@ -3,9 +3,11 @@
 # You may place a similar script in $HOME/.config/openbox/autostart
 # to run user-specific things.
 #
+#~/.local/bin/hdmi-check &
 xset s off -dpms &
 xset b 0 0 0 &
-~/.fehbg &
+#~/.fehbg &
+feh --bg-fill ~/.wallpapers/nature_oR4qeXc.jpg
 fcitx &
 nm-applet &
 redshift &

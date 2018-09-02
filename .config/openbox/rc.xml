@@ -196,13 +196,14 @@
     <!-- Keybindings for running applications -->
     <keybind key="A-Return">
       <action name="Execute">
-        <command>st -e fish</command>
+        <command>xst -e fish</command>
       </action>
     </keybind>
     <keybind key="A-space">
       <action name="Execute">
-        <name>rofi</name>
+        <name>albert</name>
         <command>rofi -show drun -theme-str '#prompt { text-color: rgba(0,0,0,0%); }'</command>
+        <!--<command>albert toggle</command>-->
       </action>
     </keybind>
     <keybind key="A-S-r">
@@ -227,6 +228,12 @@
         <action name="Execute">
             <name>Random Wallpaper</name>
             <command>feh --randomize --bg-fill ~/.wallpapers/</command>
+        </action>
+    </keybind>
+    <keybind key="A-C-r">
+        <action name="Execute">
+            <name>Redshift</name>
+            <command>~/.local/bin/red.sh</command>
         </action>
     </keybind>
     <keybind key="A-c">
@@ -266,6 +273,12 @@
       <action name="Execute">
         <name>Take Screenshot</name>
         <command>scrot /tmp/`date +%Y%m%d_%H%M%S`.png &amp;&amp; notify-send 'SCROT' 'Screenshot saved at /tmp'</command>
+      </action>
+    </keybind>
+    <keybind key="Print">
+      <action name="Execute">
+        <name>Take Screenshot</name>
+        <command>scrot /tmp/`date +%Y%m%d_%H%M%S`.png &amp;&amp; notify-send 'SCROT' 'Screenshot taken (/tmp)'</command>
       </action>
     </keybind>
     <!--

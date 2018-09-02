@@ -9,4 +9,5 @@ else
     xrandr --output $IN --auto --primary --output $EXT --auto --right-of $IN
 fi
 
-nitrogen --restore
+#nitrogen --restore
+~/.fehbg

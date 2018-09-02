@@ -66,7 +66,7 @@ rofi.terminal: rofi-sensible-terminal
 ! THEMING
 ! ----------------------------------------------------------------------------
 
-rofi.theme: ~/.config/rofi/dark.theme
+rofi.theme: ~/.config/rofi/full.theme
 
 ! Whether to load and show icons
 rofi.show-icons: false
@@ -132,7 +132,8 @@ rofi.columns: 1
 ! Set width of the menu. The value is specified in percentage.
 ! If the value is larger then 100, size is set in pixels.
 ! If the value is negative, it tries to estimates a character width.
-rofi.width: 720
+!rofi.width: 720
+rofi.width: 100
 
 ! Define the inner margin of the window.
 rofi.padding: 5
@@ -145,13 +146,13 @@ rofi.padding: 5
 rofi.location: 2
 
 ! Y-offset relative to location.
-rofi.yoffset: 42
+rofi.yoffset: 0
 
 ! X-offset relative to location.
 rofi.xoffset: 0
 
 ! Use the full screen height and width.
-rofi.fullscreen: false
+rofi.fullscreen: true
 
 ! Open in sidebar-mode.
 ! In this mode a list of all enabled modes is shown at the bottom. (See -modi option)

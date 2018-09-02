@@ -28,8 +28,8 @@ background = ${colors.trans-background}
 background-alt = ${colors.trans-background-alt}
 foreground = ${colors.trans-foreground}
 foreground-alt = ${colors.trans-foreground-alt}
-primary = ${xrdb:color15}
-secondary = #00aaff
+primary = ${xrdb:color5}
+secondary = ${xrdb:color2}
 alert = ${xrdb:color1}
 battery-charging = #00aaff
 battery-discharging = #ffaa00
@@ -65,7 +65,7 @@ modules-right = volume wlan time
 
 [bar/top]
 #monitor = ${env:MONITOR:eDP1}
-monitor = ${env:MONITOR:HDMI1}
+#monitor = ${env:MONITOR:HDMI1}
 #bottom = true
 width = 100%
 height = 42
@@ -89,12 +89,13 @@ underline-color = ${colors.foreground}
 ;border-bottom-size = 0
 ;border-color = #00000000
 
-padding-left = 3
-padding-right = 7
+padding-left = 6
+padding-right = 12
 module-margin-left = 2
-module-margin-right = 4
+module-margin-right = 6
 
-font-0 = San Fransisco Display:style=Bold:pixelsize=12;3
+;font-0 = San Fransisco Display:style=Bold:pixelsize=12;3
+font-0 = Lato:style=Bold:pixelsize=12;3
 ;font-1 = FontAwesome:pixelsize=13;4
 font-1 = Material Design Icons:pixelsize=13;3
 font-2 = Weather Icons:pixelsize=13;5
@@ -190,27 +191,42 @@ pin-workspaces = true
 enable-click = true
 enable-scroll = false
 
-icon-0 = 1;    
-icon-1 = 2;        
-icon-2 = 3;        
-icon-3 = 4;        
-icon-4 = 5;        
-icon-5 = 6;        
-;icon-default =        
+#icon-0 = 1;    
+#icon-1 = 2;        
+#icon-2 = 3;        
+#icon-3 = 4;        
+#icon-4 = 5;        
+#icon-5 = 6;        
+#icon-default =        
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-5 = 6;
 
 format = <label-state>
 label-monitor = %name%
+
 label-active = %icon%
-label-active-foreground = ${colors.foreground}
+label-active-foreground = ${colors.primary}
 label-active-background = ${colors.background}
+label-active-underline = ${colors.primary}
+label-active-padding = 8
+
 label-occupied = %icon%
-label-occupied-foreground = %{colors.foreground}
-label-occupied-underline = ${colors.foreground-alt}
+label-occupied-foreground = ${colors.secondary}
+;label-occupied-underline = ${colors.secondary}
+label-occupied-padding = 8
+
 label-urgent = %icon%
 label-urgent-foreground = ${colors.foreground-alt}
 label-urgent-background = ${colors.background-alt}
+label-urgent-padding = 8
+
 label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 8
 
 [module/mpd]
 type = internal/mpd
