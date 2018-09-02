@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# fullscreen
+scrot /tmp/`date +%Y%m%d_%H%M%S`.png && notify-send 'SCROT' 'Screenshot taken (/tmp)'
