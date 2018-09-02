@@ -272,13 +272,13 @@
     <keybind key="A-P">
       <action name="Execute">
         <name>Take Screenshot</name>
-        <command>scrot /tmp/`date +%Y%m%d_%H%M%S`.png &amp;&amp; notify-send 'SCROT' 'Screenshot saved at /tmp'</command>
+        <command>scrot -s</command>
       </action>
     </keybind>
     <keybind key="Print">
       <action name="Execute">
         <name>Take Screenshot</name>
-        <command>scrot /tmp/`date +%Y%m%d_%H%M%S`.png &amp;&amp; notify-send 'SCROT' 'Screenshot taken (/tmp)'</command>
+        <command>~/.local/bin/screenshot</command>
       </action>
     </keybind>
     <!--
