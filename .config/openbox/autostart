@@ -12,10 +12,10 @@ fcitx &
 nm-applet &
 redshift &
 #~/.local/bin/blurme
-~/.local/bin/hide &
 dunst -config ~/.config/dunst/dunstrc &
 sleep 1 && compton -b --config ~/.config/compton.blur.conf &
 sleep 1 && polybar top &
+sleep 2 && ~/.local/bin/hide-polybar &
 
 # If you want to use GNOME config tools...
 #
