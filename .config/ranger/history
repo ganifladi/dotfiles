@@ -2,4 +2,8 @@ open_with
 1
 shell
 chmod +x
+rename Bilder
 cd b
+lp
+print
+bash lp

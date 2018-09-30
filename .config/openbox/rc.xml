@@ -19,7 +19,7 @@
     <primaryMonitor>1</primaryMonitor>
   </placement>
   <theme>
-    <name>thicc</name>
+    <name>One-Dark</name>
     <titleLayout>LMC</titleLayout>
     <cornerRadius>8</cornerRadius>
     <keepBorder>no</keepBorder>
@@ -218,7 +218,7 @@
             <command>openbox --exit</command>
         </action>
     </keybind>
-    <keybind key="A-S-x">
+    <keybind key="W-l">
         <action name="Execute">
             <name>Lock Screen</name>
             <command>~/.local/bin/i3lock-blur</command>
